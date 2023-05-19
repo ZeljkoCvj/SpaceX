@@ -1,0 +1,13 @@
+.contentHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contentHolder .image {
+  width: 100%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=dialog-body.component.css.map */

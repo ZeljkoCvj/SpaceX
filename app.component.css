@@ -1,0 +1,70 @@
+.headerHolder {
+  background-color: rgba(128, 128, 128, 0.392);
+}
+.headerHolder .header {
+  height: 2rem;
+  margin: 0rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerHolder .header .logo img {
+  width: 10rem;
+  margin-left: -1rem;
+}
+.headerHolder .header .toggleHolder .toggle {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 23.8px;
+  margin-top: 5px;
+}
+.headerHolder .header .toggleHolder .toggle input {
+  display: none;
+}
+.headerHolder .header .toggleHolder .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: grey;
+  transition: 0.4s;
+  border-radius: 23.8px;
+}
+.headerHolder .header .toggleHolder .slider:before {
+  position: absolute;
+  content: "";
+  height: 18.2px;
+  width: 18.2px;
+  left: 2.8px;
+  bottom: 2.6px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.headerHolder .header .toggleHolder input:checked + .slider {
+  background-color: rgb(0, 0, 0);
+}
+.headerHolder .header .toggleHolder input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.headerHolder .header .toggleHolder input:checked + .slider:before {
+  transform: translateX(18.2px);
+}
+
+.contentHolder {
+  margin: 0rem 3rem;
+}
+
+.dark-theme {
+  background-color: rgb(34, 32, 32);
+  color: white;
+  transition: 0.5s;
+}
+
+.light-theme {
+  background-color: rgb(255, 255, 255);
+  transition: 0.5s;
+}/*# sourceMappingURL=app.component.css.map */

@@ -1,0 +1,94 @@
+.contentHolder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  width: 100%;
+  margin-top: 3rem;
+  transition: 1s;
+}
+@media (max-width: 1200px) {
+  .contentHolder {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 950px) {
+  .contentHolder {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 580px) {
+  .contentHolder {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.contentHolder .launch {
+  text-align: center;
+  font-size: 12px;
+  height: 340px;
+  overflow: hidden;
+}
+.contentHolder .launch .bold {
+  font-weight: bold;
+}
+
+.imgHolder {
+  width: 100%;
+  height: 50%;
+  border: 2px solid gray;
+}
+.imgHolder .launch-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.launch-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.launch-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.launch-description {
+  margin-bottom: 0.5rem;
+}
+
+.launch-date {
+  font-style: italic;
+  color: gray;
+}
+
+.btn {
+  display: flex;
+  font-size: 10px;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  color: aqua;
+}
+
+.offset-lg-12 {
+  margin-top: 2rem;
+  width: 40%;
+  margin-left: -12px;
+}
+.offset-lg-12 .form-control {
+  border: none;
+  border-radius: none;
+}
+.offset-lg-12 .input-group > input {
+  box-shadow: none;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: none;
+}
+.offset-lg-12 .input-group > input:focus {
+  box-shadow: none;
+}/*# sourceMappingURL=list-launches.component.css.map */

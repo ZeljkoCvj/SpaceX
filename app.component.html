@@ -1,0 +1,23 @@
+<body
+  [ngClass]="{
+    'dark-theme': isDarkThemeSelected,
+    'light-theme': !isDarkThemeSelected
+  }"
+>
+  <div class="headerHolder">
+    <div class="header">
+      <div class="logo">
+        <img src="assets/SpaceX-Logo.png" alt="loading" />
+      </div>
+      <div class="toggleHolder">
+        <label class="toggle">
+          <input type="checkbox" [(ngModel)]="isDarkThemeSelected" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="contentHolder">
+    <app-list-launches></app-list-launches>
+  </div>
+</body>

@@ -1,0 +1,18 @@
+<div class="contentHolder">
+  <img
+    *ngIf="data.item.links.flickr_images[0]"
+    [src]="data.item.links.flickr_images[0]"
+    alt="loading"
+    class="image"
+  />
+  <img
+    *ngIf="!data.item.links.flickr_images[0]"
+    src="assets/rocket.jpg"
+    alt="loading"
+    class="image"
+  />
+
+  <h2>{{ data.item.mission_name }}</h2>
+  <p>Flight Number: {{ data.item.flight_number }}</p>
+  <p>Launch Date: {{ data.item.launch_date_utc | date : "medium" }}</p>
+</div>

@@ -1,0 +1,47 @@
+<div class="offset-lg-12">
+  <div class="input-group">
+    <input
+      [ngClass]="validate()"
+      [(ngModel)]="inputValue"
+      (input)="searchFlight()"
+      class="form-control"
+      placeholder="Search launches"
+      id="exampleInput"
+      type="text"
+    />
+  </div>
+</div>
+<div class="contentHolder">
+  <div class="launch" *ngFor="let item of filterItems">
+    <div class="imgHolder">
+      <img
+        *ngIf="item.links.flickr_images[0]"
+        [src]="item.links.flickr_images[0]"
+        alt="loading"
+        class="launch-image"
+      />
+      <img
+        *ngIf="!item.links.flickr_images[0]"
+        src="assets/rocket.jpg"
+        alt="loading"
+        class="launch-image"
+      />
+    </div>
+    <div class="launch-details">
+      <p class="launch-name">{{ item.mission_name }}</p>
+      <p>{{ item.launch_date_local }}</p>
+      <p class="launch-description">
+        {{
+          item.details
+            ? item.details.split(" ").slice(0, 5).join(" ") + "..."
+            : "..."
+        }}
+      </p>
+      <mat-dialog-actions>
+        <button class="btn btn-primary" (click)="openDialog(item)">
+          More information
+        </button>
+      </mat-dialog-actions>
+    </div>
+  </div>
+</div>
